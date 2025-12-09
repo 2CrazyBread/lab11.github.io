@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вивчення іноземної мови</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="http://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Вивчення мови</h1>
+    
+    <div class="stats">
+      <div class="stat">Крок: <span id="currentStep">1</span>/<span id="totalSteps">10</span></div>
+      <div class="stat correct">Вірно: <span id="correctCount">0</span></div>
+      <div class="stat incorrect">Невірно: <span id="incorrectCount">0</span></div>
+    </div>
+    
+    <div class="card">
+      <div class="word-display" id="wordToTranslate">слово</div>
+      <div class="input-container">
+        <input type="text" id="translationInput" placeholder="Введіть переклад...">
+        <div class="error" id="inputError"></div>
+      </div>
+    </div>
+    
+    <div class="buttons" id="buttonsContainer"></div>
+    
+    <div class="message" id="resultMessage"></div>
+  </div>
+  
+  <div class="modal" id="resultsModal">
+    <div class="modal-content">
+      <h2>Результати</h2>
+      <div class="score" id="levelScore">0%</div>
+      <div class="level-title" id="levelTitle">Рівень</div>
+      <div class="final-stats">
+        <div>Вірно: <span id="finalCorrect">0</span></div>
+        <div>Невірно: <span id="finalIncorrect">0</span></div>
+        <div>Усього: <span id="finalTotal">10</span></div>
+      </div>
+      <button class="modal-btn" id="restartModalBtn">Спробувати ще</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
